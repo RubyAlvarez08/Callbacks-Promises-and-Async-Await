@@ -1,38 +1,38 @@
 let stocks = {
-    Fruits : ['strawberry', 'grapes','bananna', 'apple'],
-    Liquid : ['water', 'ice'],
-    Holder : ['cone', 'cup', 'stick'],
-    Toppings : ['chocolate', 'peanuts']
+    Fruits: ['strawberry', 'grapes', 'bananna', 'apple'],
+    Liquid: ['water', 'ice'],
+    Holder: ['cone', 'cup', 'stick'],
+    Toppings: ['chocolate', 'peanuts']
 }
 
-let order = (fruit_name,call_production) => {
-    setTimeout(function(){
+let order = (fruit_name, call_production) => {
+    setTimeout(function () {
         console.log(`${stocks.Fruits[fruit_name]} was selected`)
         //Order placed. call production to start
-        production();
-    },2000)
+        call_production();
+    }, 2000)
 }
 let production = () => {
-    setTimeout(()=>{
+    setTimeout(() => {
         console.log('production has started')
-        setTimeout(()=>{
+        setTimeout(() => {
             console.log('The fruits has been chopped')
-            setTimeout(()=>{
+            setTimeout(() => {
                 console.log(`${stocks.Liquid[0]} and ${stocks.Liquid[1]} added`)
-                setTimeout(()=>{
+                setTimeout(() => {
                     console.log('Start the machine')
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         console.log(` Ice cream placed on ${stocks.Holder[1]}`)
-                        setTimeout(()=>{
+                        setTimeout(() => {
                             console.log(`${stocks.Toppings[0]} as topping`)
-                            setTimeout(()=>{
+                            setTimeout(() => {
                                 console.log('serve Ice Cream')
-                            },2000)
-                        },3000)
-                    },2000)
-                },1000)
-            },1000)
-        },2000)
-    },0000)
+                            }, 2000)
+                        }, 3000)
+                    }, 2000)
+                }, 1000)
+            }, 1000)
+        }, 2000)
+    }, 0000)
 }
-order(2,production)
+order(2, production)
