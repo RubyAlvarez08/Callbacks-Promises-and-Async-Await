@@ -5,7 +5,7 @@ let stocks = {
     Toppings: ['chocolate', 'peanuts']
 }
 
-let is_shop_open = true;
+let is_shop_open = false;
 
 let order = (time, work) => {
     return new Promise((resolve, reject) => {
@@ -41,3 +41,9 @@ order(2000, () => console.log(`${stocks.Fruits[0]} was selected`))
     .then(() => {
         return order(2000, () => console.log('Serve ice cream'))
     })
+    .catch(() =>{
+        console.log('customer left')
+    })
+    .finally(()=>{
+        console.log("end of day")
+      }) 
